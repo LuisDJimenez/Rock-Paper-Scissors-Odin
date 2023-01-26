@@ -49,10 +49,11 @@ function game() {
    } else if (palyerScore > computerScore) {
     console.log("You won this game")
    } else if (palyerScore == computerScore) {
-    console.log("Tie!")
+    console.log("Its a Tie!")
    } else {
     console.log("Something went wrong")
    }
 }
+
 
 game()
