@@ -1,59 +1,79 @@
-console.log("Hello how are you let's play Rock Paper Scissors.")
 let palyerScore = 0
 let computerScore = 0
 
-function getComputerChoice() {
+function computerPlay() {
     let randomNumber = Math.floor(Math.random() * 3)
     switch (randomNumber) {
       case 0:
-        return 'ROCK'
+        return 'Rock'
       case 1:
-        return 'PAPER'
+        return 'Paper'
       case 2:
-        return 'SCISSORS'
+        return 'Scissors'
     }
   }
 
-function playRound (){
-   
-    let playerSelection = prompt("Choose!").toUpperCase()
-    let computerSelection = getComputerChoice()
-    console.log("You pick " + playerSelection + " and the pc picks " + computerSelection)
+  let rockButton = document.querySelector('#rock');
+  let paperButton = document.querySelector('#paper');
+  let scissorsButton = document.querySelector('#scissors');
+  let scoreplayer = document.querySelector('#playerScore')
+  let scorepc = document.querySelector('#computerScore')
+  let showResult = document.querySelector('#tellWinner')
+
+  rockButton.addEventListener('click', function() {
+    playRound('Rock', computerPlay());
+  });
+  
+  paperButton.addEventListener('click', function() {
+    playRound('Paper', computerPlay());
+  });
+  
+  scissorsButton.addEventListener('click', function() {
+    playRound('Scissors', computerPlay());
+  });
+
+
+
+
+function playRound (playerSelection, computerSelection){
+  explain.textContent = `You pick ${playerSelection}  and the PC picks ${computerSelection}`
+  
+  
 
     if (playerSelection == computerSelection) {
-        console.log("its a tie") 
+      result.textContent = "Its a tie"
+      showResult.innerHTML = ` `
     }
-    else if (playerSelection === "ROCK" && computerSelection === "SCISSORS" || 
-    playerSelection === "PAPER" && computerSelection === "ROCK" || 
-    playerSelection === "SCISSORS" && computerSelection === "PAPER") {
+    else if (playerSelection === "Rock" && computerSelection === "Scissors" || 
+    playerSelection === "Paper" && computerSelection === "Rock" || 
+    playerSelection === "Scissors" && computerSelection === "Paper") {
         palyerScore++
-        console.log("You Won") 
+        scoreplayer.innerHTML = `Player Score: ${palyerScore}`
+        result.textContent = "You Won" 
+        showResult.innerHTML = ` `
+
     }
-    else if (playerSelection === "SCISSORS" && computerSelection === "ROCK" || 
-    playerSelection === "ROCK" && computerSelection === "PAPER" || 
-    playerSelection === "PAPER" && computerSelection === "SCISSORS"){
+    else{
         computerScore++
-        console.log("You lost") 
+        result.textContent = "You lost" 
+        scorepc.innerHTML = `PC Score: ${computerScore}`
+        showResult.innerHTML = ` `
     }
-    else {
-         console.log("You need to pick Rock, Paper or Scissors")
+    
+    if (palyerScore >= 5) {
+      palyerScore = 0
+      computerScore= 0
+      scoreplayer.innerHTML = `Player Score: ${palyerScore}`
+      scorepc.innerHTML = `PC Score: ${computerScore}`
+      showResult.innerHTML = `You won this round`
+    }
+    else if (computerScore >= 5) {
+      palyerScore = 0
+      computerScore= 0
+      scoreplayer.innerHTML = `Player Score: ${palyerScore}`
+      scorepc.innerHTML = `PC Score: ${computerScore}`
+      showResult.innerHTML = `You lost this round`
     }
 }
 
-function game() {
-    for (let i = 0; i < 5; i++){
-        playRound()
-    }
-   if (computerScore > palyerScore) {
-    console.log("You lost this game")
-   } else if (palyerScore > computerScore) {
-    console.log("You won this game")
-   } else if (palyerScore == computerScore) {
-    console.log("Its a Tie!")
-   } else {
-    console.log("Something went wrong")
-   }
-}
 
-
-game()
