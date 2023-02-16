@@ -49,13 +49,13 @@ function playRound (playerSelection, computerSelection){
     playerSelection === "Scissors" && computerSelection === "Paper") {
         palyerScore++
         scoreplayer.innerHTML = `Player Score: ${palyerScore}`
-        result.textContent = "You Won" 
+        result.textContent = "You Won!" 
         showResult.innerHTML = ` `
 
     }
     else{
         computerScore++
-        result.textContent = "You lost" 
+        result.textContent = "You lost!" 
         scorepc.innerHTML = `PC Score: ${computerScore}`
         showResult.innerHTML = ` `
     }
@@ -65,14 +65,14 @@ function playRound (playerSelection, computerSelection){
       computerScore= 0
       scoreplayer.innerHTML = `Player Score: ${palyerScore}`
       scorepc.innerHTML = `PC Score: ${computerScore}`
-      showResult.innerHTML = `You won this round`
+      showResult.innerHTML = `You won this round! Congrats`
     }
     else if (computerScore >= 5) {
       palyerScore = 0
       computerScore= 0
       scoreplayer.innerHTML = `Player Score: ${palyerScore}`
       scorepc.innerHTML = `PC Score: ${computerScore}`
-      showResult.innerHTML = `You lost this round`
+      showResult.innerHTML = `You lost this round! best luck next time.`
     }
 }
 
