@@ -1,54 +1,55 @@
-
 body {
-    background: linear-gradient(to right, #FF5E5B, #FFC371);
-
+  background: linear-gradient(to right, #ff5e5b, #ffc371);
 }
 
 h1 {
-    color: #FFFFE0;
-    text-align: center;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: #ffffe0;
+  text-align: center;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
 .btn-container {
-    margin: 0 auto;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 
 button {
-    background-color: rgb(64, 64, 64); /* a shade of blue */
-    color: white;
-    padding: 10px 30px;
-    border-radius: 10px;
-    border: none;
-    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.3); /* adds a subtle drop shadow */
-    margin: 1vh 6vh;
-    width: 8rem;
+  background-color: rgb(64, 64, 64); /* a shade of blue */
+  color: white;
+  padding: 10px 30px;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.3); /* adds a subtle drop shadow */
+  margin: 1vh 6vh;
+  width: 8rem;
 }
 
 button:hover {
-    background-color: black; /* a lighter shade of blue on hover */
-    cursor: pointer;
-  }
-
+  background-color: black; /* a lighter shade of blue on hover */
+  cursor: pointer;
+}
 
 .score {
-    display: inline;
-    margin: 1vh;
+  display: inline;
+  margin: 1vh;
 }
 
-#explain, #result {
-    color: #FFFFE0;
-    font-size: large;
-    text-align: center;
-    margin-top: 5vh;
+#explain,
+#result {
+  color: #ffffe0;
+  font-size: large;
+  text-align: center;
+  margin-top: 5vh;
 }
 
-#playerScore, #computerScore, #tellWinner {
-    color: #FFFFE0;
-    font-size: large
+#playerScore,
+#computerScore,
+#tellWinner {
+  color: #ffffe0;
+  font-size: large;
 }
