@@ -53,6 +53,16 @@
 
 html {
   background: linear-gradient(90deg, #4b6cb7 0%, #182848 100%);
+  position: relative;
+  min-height: 100%;
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 body {
