@@ -3,9 +3,17 @@
   src: url("TwitterColorEmoji-SVGinOT.ttf") format("truetype");
 }
 
+@media (max-width: 768px) {
+  .status {
+    margin: 1rem !important;
+    width: 60px !important;
+    height: 160px !important;
+  }
+}
+
 @keyframes slideInLeft {
   from {
-    transform: translateX(-120px);
+    transform: translateX(-20dvw);
   }
 
   to {
@@ -15,7 +23,7 @@
 
 @keyframes slideInRight {
   from {
-    transform: translateX(120px);
+    transform: translateX(20dvw);
   }
 
   to {
@@ -25,7 +33,7 @@
 
 @keyframes slideOutLeft {
   from {
-    transform: translateX(-120px);
+    transform: translateX(-20dvw);
   }
 
   to {
@@ -35,7 +43,7 @@
 
 @keyframes slideOutRight {
   from {
-    transform: translateX(120px);
+    transform: translateX(20dvw);
   }
 
   to {
